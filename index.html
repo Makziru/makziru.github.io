@@ -26,7 +26,6 @@
             background-color: var(--bg);
             color: var(--text);
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            /* UPSCALED: Increased base font size */
             font-size: 18px; 
             line-height: 1.6;
             overflow-x: hidden;
@@ -45,15 +44,14 @@
         .top-band, .bottom-band {
             background-color: var(--band-bg);
             width: 100%;
-            /* UPSCALED: Increased padding */
-            padding: 4vw 5vw;
+            /* UPDATED: Reduced side padding to allow headline to fill more space */
+            padding: 4vw 2vw;
             border-bottom: 1px solid var(--border);
         }
         
         .bottom-band { border-top: 1px solid var(--border); border-bottom: none; margin-top: 4rem; }
 
         .container {
-            /* UPSCALED: Increased max-width */
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 5vw;
@@ -66,10 +64,12 @@
 
         h1 {
             font-weight: 700;
-            /* UPSCALED: Larger font size */
-            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            /* UPDATED: Much larger font size for maximum impact */
+            font-size: clamp(3rem, 10vw, 7rem);
             letter-spacing: -0.05em;
-            line-height: 1.1;
+            /* UPDATED: Tighter line height for a cleaner, modern look */
+            line-height: 0.95;
+            text-align: center; /* Centered for a cleaner look when large */
         }
 
         h2 { 
@@ -86,10 +86,8 @@
         ul { list-style: none; margin: 1.5rem 0; }
         li { border-bottom: 1px solid var(--border); padding: 12px 0; display: flex; justify-content: space-between; }
 
-        /* FIX: Gallery Layout to 2x2 */
         .gallery {
             display: grid;
-            /* FORCES 2 columns, fills remaining space */
             grid-template-columns: repeat(2, 1fr); 
             gap: 20px;
         }
