@@ -26,7 +26,7 @@
             background-color: var(--bg);
             color: var(--text);
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            /* UPSCALE: Increased base line height and font size for better readability */
+            /* UPSCALED: Increased base font size */
             font-size: 18px; 
             line-height: 1.6;
             overflow-x: hidden;
@@ -45,7 +45,7 @@
         .top-band, .bottom-band {
             background-color: var(--band-bg);
             width: 100%;
-            /* UPSCALE: Increased padding for a more premium look */
+            /* UPSCALED: Increased padding */
             padding: 4vw 5vw;
             border-bottom: 1px solid var(--border);
         }
@@ -53,7 +53,7 @@
         .bottom-band { border-top: 1px solid var(--border); border-bottom: none; margin-top: 4rem; }
 
         .container {
-            /* UPSCALE: Increased max-width for PC screens */
+            /* UPSCALED: Increased max-width */
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 5vw;
@@ -66,7 +66,7 @@
 
         h1 {
             font-weight: 700;
-            /* UPSCALE: Larger font size for headline */
+            /* UPSCALED: Larger font size */
             font-size: clamp(2.5rem, 5vw, 3.8rem);
             letter-spacing: -0.05em;
             line-height: 1.1;
@@ -86,10 +86,11 @@
         ul { list-style: none; margin: 1.5rem 0; }
         li { border-bottom: 1px solid var(--border); padding: 12px 0; display: flex; justify-content: space-between; }
 
+        /* FIX: Gallery Layout to 2x2 */
         .gallery {
             display: grid;
-            /* UPSCALE: Grid adjustments for better scaling */
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            /* FORCES 2 columns, fills remaining space */
+            grid-template-columns: repeat(2, 1fr); 
             gap: 20px;
         }
         
@@ -98,7 +99,7 @@
             background: #e0ddd8;
             border: 1px solid var(--border);
             overflow: hidden;
-            border-radius: 16px; /* Slightly more rounded corners */
+            border-radius: 16px; 
         }
         
         .gallery-item img {
