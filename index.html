@@ -6,6 +6,7 @@
     <title>Makziru | Texture Artist</title>
     
     <link rel="icon" type="image/png" href="favicon.png">
+
     <style>
         :root {
             --bg: #F5F2ED;
@@ -25,7 +26,9 @@
             background-color: var(--bg);
             color: var(--text);
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            line-height: 1.5;
+            /* UPSCALE: Increased base line height and font size for better readability */
+            font-size: 18px; 
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
@@ -42,14 +45,16 @@
         .top-band, .bottom-band {
             background-color: var(--band-bg);
             width: 100%;
-            padding: 2.5vw 5vw;
+            /* UPSCALE: Increased padding for a more premium look */
+            padding: 4vw 5vw;
             border-bottom: 1px solid var(--border);
         }
-       
-        .bottom-band { border-top: 1px solid var(--border); border-bottom: none; margin-top: 3rem; }
+        
+        .bottom-band { border-top: 1px solid var(--border); border-bottom: none; margin-top: 4rem; }
 
         .container {
-            max-width: 1000px;
+            /* UPSCALE: Increased max-width for PC screens */
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 5vw;
         }
@@ -61,83 +66,91 @@
 
         h1 {
             font-weight: 700;
-            font-size: clamp(2rem, 5vw, 3.2rem);
+            /* UPSCALE: Larger font size for headline */
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
             letter-spacing: -0.05em;
             line-height: 1.1;
         }
 
-        h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 1rem; }
-        p { margin-bottom: 1rem; max-width: 700px; }
-       
-        section { margin-bottom: 3rem; margin-top: 2rem; }
+        h2 { 
+            font-size: 1rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.15em; 
+            margin-bottom: 1.5rem; 
+        }
+        
+        p { margin-bottom: 1.5rem; max-width: 800px; }
+        
+        section { margin-bottom: 4rem; margin-top: 2rem; }
 
-        ul { list-style: none; margin: 1rem 0; }
-        li { border-bottom: 1px solid var(--border); padding: 8px 0; display: flex; justify-content: space-between; }
+        ul { list-style: none; margin: 1.5rem 0; }
+        li { border-bottom: 1px solid var(--border); padding: 12px 0; display: flex; justify-content: space-between; }
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            /* UPSCALE: Grid adjustments for better scaling */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
-       
+        
         .gallery-item {
             aspect-ratio: 1/1;
             background: #e0ddd8;
             border: 1px solid var(--border);
             overflow: hidden;
-            border-radius: 12px;
+            border-radius: 16px; /* Slightly more rounded corners */
         }
-       
+        
         .gallery-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
-       
+        
         .gallery-item img:hover { transform: scale(1.05); }
 
-        .feedback { border-left: 2px solid var(--accent); padding-left: 20px; margin-bottom: 1rem; font-style: italic; }
-       
-        .instr-list { list-style: none; margin-bottom: 1rem; max-width: 700px; }
-        .instr-list li { border-bottom: none; padding: 4px 0; font-size: 0.95rem; color: var(--text); display: list-item; }
+        .feedback { border-left: 3px solid var(--accent); padding-left: 20px; margin-bottom: 1.5rem; font-style: italic; }
+        
+        .instr-list { list-style: none; margin-bottom: 1.5rem; max-width: 800px; }
+        .instr-list li { border-bottom: none; padding: 6px 0; font-size: 1rem; color: var(--text); display: list-item; }
 
         .commission-btn {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: 1px solid var(--accent);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 600;
             transition: all 0.3s;
-            margin-top: 0.5rem;
+            margin-top: 1rem;
             border-radius: 4px;
             background: var(--grad-three);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-       
+        
         .commission-btn:hover {
             background: var(--accent);
             -webkit-text-fill-color: white;
             border-color: var(--accent);
         }
 
-        .social-links { display: flex; gap: 25px; margin-top: 1rem; list-style: none; }
+        .social-links { display: flex; gap: 30px; margin-top: 1rem; list-style: none; }
         .social-links a {
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 1rem;
             border-bottom: 1px solid transparent;
             transition: all 0.3s;
         }
-       
+        
         .link-tiktok { color: #EE1D52; }
         .link-youtube { color: #FF0000; }
         .link-discord { color: #5865F2; }
 
         .social-links a:hover { opacity: 0.7; }
-        .discord-tag { color: var(--accent); font-size: 0.8rem; display: block; margin-top: 5px; }
+        .discord-tag { color: var(--accent); font-size: 0.9rem; display: block; margin-top: 10px; }
     </style>
 </head>
 <body>
