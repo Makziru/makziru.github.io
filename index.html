@@ -26,7 +26,7 @@
             background-color: var(--bg);
             color: var(--text);
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            /* RESTORED: Back to the size you liked */
+            /* GLOBAL SIZE: Back to the large, readable size */
             font-size: 18px; 
             line-height: 1.6;
             overflow-x: hidden;
@@ -90,14 +90,21 @@
         
         section { margin-bottom: 4rem; margin-top: 2rem; }
 
-        /* FIXED: Only the board text is slightly smaller to prevent overlap */
+        /* THE BOARD FIX: Flexible layout to prevent crowding */
         ul.info-list { list-style: none; margin: 1.5rem 0; }
         ul.info-list li { 
             border-bottom: 1px solid var(--border); 
-            padding: 14px 0; 
+            padding: 16px 0; 
             display: flex; 
             justify-content: space-between; 
-            font-size: 0.9rem; /* Just small enough to fit 'PC & Quest Included' on one line */
+            flex-wrap: wrap; /* Allows text to wrap if it gets too near */
+            gap: 10px;
+        }
+
+        /* Slightly smaller just for these specific detail points to ensure fit */
+        ul.info-list li span:last-child {
+            font-size: 0.95rem;
+            text-align: right;
         }
 
         .gallery {
