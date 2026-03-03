@@ -14,7 +14,6 @@
             --accent: #A64D3B;
             --text: #2C2621;  
             --border: rgba(44, 38, 33, 0.15);
-            /* Fixed Gradient Syntax */
             --grad-one: linear-gradient(135deg, #2C2621 0%, #A64D3B 50%, #2C2621 100%);
             --grad-two: linear-gradient(135deg, #3A7CA5 0%, #4DC3B8 100%);
             --grad-three: linear-gradient(135deg, #6B8E23 0%, #DAA520 100%);
@@ -27,7 +26,7 @@
             background-color: var(--bg);
             color: var(--text);
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 18px; 
+            font-size: 16px; /* Slightly lowered base font size for better fit */
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -45,7 +44,7 @@
         .top-band, .bottom-band {
             background-color: var(--band-bg);
             width: 100%;
-            padding: 8vw 2vw; /* Increased padding for impact */
+            padding: 8vw 2vw;
             border-bottom: 1px solid var(--border);
         }
         
@@ -57,13 +56,11 @@
             padding: 0 5vw;
         }
 
-        /* Fixed Visibility for Titles */
         .grad-one, .grad-two, .grad-three, .grad-red { 
-            color: var(--text); /* Fallback color */
+            color: var(--text);
             display: block;
         }
 
-        /* Gradient Support for browsers that allow it */
         @supports (-webkit-background-clip: text) {
             .grad-one { background: var(--grad-one); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
             .grad-two { background: var(--grad-two); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -81,7 +78,7 @@
         }
 
         h2 { 
-            font-size: 1.1rem; 
+            font-size: 1rem; 
             text-transform: uppercase; 
             letter-spacing: 0.15em; 
             margin-bottom: 1.5rem; 
@@ -92,8 +89,15 @@
         
         section { margin-bottom: 4rem; margin-top: 2rem; }
 
-        ul { list-style: none; margin: 1.5rem 0; }
-        li { border-bottom: 1px solid var(--border); padding: 12px 0; display: flex; justify-content: space-between; }
+        /* ADJUSTED: Better spacing for the info list */
+        ul.info-list { list-style: none; margin: 1.5rem 0; }
+        ul.info-list li { 
+            border-bottom: 1px solid var(--border); 
+            padding: 16px 0; /* Increased vertical space */
+            display: flex; 
+            justify-content: space-between; 
+            font-size: 0.95rem; /* Slightly smaller text for cleaner lines */
+        }
 
         .gallery {
             display: grid;
@@ -119,7 +123,7 @@
         .feedback { border-left: 3px solid var(--accent); padding-left: 20px; margin-bottom: 1.5rem; font-style: italic; }
         
         .instr-list { list-style: none; margin-bottom: 1.5rem; max-width: 800px; }
-        .instr-list li { border-bottom: none; padding: 6px 0; font-size: 1rem; color: var(--text); display: list-item; }
+        .instr-list li { border-bottom: none; padding: 6px 0; font-size: 0.95rem; color: var(--text); display: list-item; }
 
         .tos-box {
             background: var(--band-bg);
@@ -128,7 +132,7 @@
             border: 1px solid var(--border);
         }
         .tos-item {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 0.8rem;
             display: block;
         }
@@ -139,7 +143,7 @@
             padding: 14px 28px;
             border: 2px solid var(--accent);
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 700;
             color: var(--accent);
             transition: all 0.3s;
@@ -153,18 +157,18 @@
             color: white;
         }
 
-        .social-links { display: flex; gap: 30px; margin-top: 1rem; list-style: none; flex-wrap: wrap; }
+        .social-links { display: flex; gap: 30px; margin-top: 1rem; list-style: none; flex-wrap: wrap; margin-bottom: 2rem; }
         .social-links a {
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.3s;
         }
         
         .link-tiktok { color: #EE1D52; }
         .link-youtube { color: #FF0000; }
         .link-discord { color: #5865F2; }
-        .discord-tag { color: var(--accent); font-size: 1rem; display: block; margin-top: 15px; font-weight: 600; }
+        .discord-tag { color: var(--accent); font-size: 0.95rem; display: block; margin-top: 10px; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -178,7 +182,7 @@
     <div class="container">
         <section id="about" class="fade-in" style="animation-delay: 0.4s;">
             <p>I create custom textures and handle avatar assembly in Unity for VRChat. I focus on making materials like fur look right in game, not just in the software.</p>
-            <ul>
+            <ul class="info-list">
                 <li><span>Resolution</span> <span>Up to 8K Support</span></li>
                 <li><span>Optimization</span> <span>PC & Quest Included</span></li>
                 <li><span>Pricing</span> <span>Custom (Max 80€)</span></li>
@@ -210,7 +214,7 @@
             <div class="tos-box">
                 <span class="tos-item"><strong>Usage:</strong> Textures are for personal use on your VRChat avatars only.</span>
                 <span class="tos-item"><strong>Resale:</strong> Strict prohibition on reselling, sharing, or redistributing texture files.</span>
-                <span class="tos-item"><strong>Credit:</strong> Please provide credit if asked about the texture work.</span>
+                <span class="tos-item"><strong>Credit:</strong> Please provide credit to <strong>Makziru</strong> if asked about the texture work.</span>
                 <span class="tos-item"><strong>AI Policy:</strong> My work may not be used for AI training or datasets.</span>
                 <span class="tos-item"><strong>Refunds:</strong> No refunds once the texturing process has reached the 50% completion mark.</span>
             </div>
@@ -230,6 +234,8 @@
                 <li><a href="https://youtube.com/@Makziru" class="link-youtube" target="_blank">YouTube</a></li>
                 <li><a href="https://discord.gg/makziru" class="link-discord" target="_blank">Discord</a></li>
             </ul>
+            
+            <h2 class="grad-red">For Help & Questions:</h2>
             <span class="discord-tag">Discord Username: makziru</span>
         </div>
     </div>
