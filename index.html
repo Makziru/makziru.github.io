@@ -26,7 +26,8 @@
             background-color: var(--bg);
             color: var(--text);
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 16px; /* Slightly lowered base font size for better fit */
+            /* RESTORED: Back to the size you liked */
+            font-size: 18px; 
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -78,7 +79,7 @@
         }
 
         h2 { 
-            font-size: 1rem; 
+            font-size: 1.1rem; 
             text-transform: uppercase; 
             letter-spacing: 0.15em; 
             margin-bottom: 1.5rem; 
@@ -89,14 +90,14 @@
         
         section { margin-bottom: 4rem; margin-top: 2rem; }
 
-        /* ADJUSTED: Better spacing for the info list */
+        /* FIXED: Only the board text is slightly smaller to prevent overlap */
         ul.info-list { list-style: none; margin: 1.5rem 0; }
         ul.info-list li { 
             border-bottom: 1px solid var(--border); 
-            padding: 16px 0; /* Increased vertical space */
+            padding: 14px 0; 
             display: flex; 
             justify-content: space-between; 
-            font-size: 0.95rem; /* Slightly smaller text for cleaner lines */
+            font-size: 0.9rem; /* Just small enough to fit 'PC & Quest Included' on one line */
         }
 
         .gallery {
@@ -123,7 +124,7 @@
         .feedback { border-left: 3px solid var(--accent); padding-left: 20px; margin-bottom: 1.5rem; font-style: italic; }
         
         .instr-list { list-style: none; margin-bottom: 1.5rem; max-width: 800px; }
-        .instr-list li { border-bottom: none; padding: 6px 0; font-size: 0.95rem; color: var(--text); display: list-item; }
+        .instr-list li { border-bottom: none; padding: 6px 0; font-size: 1rem; color: var(--text); display: list-item; }
 
         .tos-box {
             background: var(--band-bg);
@@ -132,7 +133,7 @@
             border: 1px solid var(--border);
         }
         .tos-item {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 0.8rem;
             display: block;
         }
@@ -143,7 +144,7 @@
             padding: 14px 28px;
             border: 2px solid var(--accent);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 700;
             color: var(--accent);
             transition: all 0.3s;
@@ -161,14 +162,14 @@
         .social-links a {
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: all 0.3s;
         }
         
         .link-tiktok { color: #EE1D52; }
         .link-youtube { color: #FF0000; }
         .link-discord { color: #5865F2; }
-        .discord-tag { color: var(--accent); font-size: 0.95rem; display: block; margin-top: 10px; font-weight: 600; }
+        .discord-tag { color: var(--accent); font-size: 1rem; display: block; margin-top: 10px; font-weight: 600; }
     </style>
 </head>
 <body>
