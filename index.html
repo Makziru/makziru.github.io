@@ -26,7 +26,6 @@
             background-color: var(--bg);
             color: var(--text);
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            /* GLOBAL SIZE: Back to the large, readable size */
             font-size: 18px; 
             line-height: 1.6;
             overflow-x: hidden;
@@ -90,18 +89,16 @@
         
         section { margin-bottom: 4rem; margin-top: 2rem; }
 
-        /* THE BOARD FIX: Flexible layout to prevent crowding */
         ul.info-list { list-style: none; margin: 1.5rem 0; }
         ul.info-list li { 
             border-bottom: 1px solid var(--border); 
             padding: 16px 0; 
             display: flex; 
             justify-content: space-between; 
-            flex-wrap: wrap; /* Allows text to wrap if it gets too near */
+            flex-wrap: wrap; 
             gap: 10px;
         }
 
-        /* Slightly smaller just for these specific detail points to ensure fit */
         ul.info-list li span:last-child {
             font-size: 0.95rem;
             text-align: right;
@@ -141,8 +138,9 @@
         }
         .tos-item {
             font-size: 0.95rem;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
             display: block;
+            line-height: 1.4;
         }
         .tos-item strong { color: var(--accent); }
 
@@ -211,7 +209,7 @@
             <h2 class="grad-three">How to Submit a Commission Request?</h2>
             <ul class="instr-list">
                 <li>1. <strong>Join</strong> the Discord community by clicking the button below.</li>
-                <li>2. <strong>Navigate</strong> to the "​💼 Commission Studio" Section.</li>
+                <li>2. <strong>Navigate</strong> to the "💼 Commission Studio" Section.</li>
                 <li>3. <strong>Open</strong> a Ticket in the #🎫┆request-panel to discuss your specific project.</li>
             </ul>
             <a href="https://discord.gg/makziru" class="commission-btn" target="_blank">Submit Request</a>
@@ -220,11 +218,12 @@
         <section id="tos" class="fade-in" style="animation-delay: 0.9s;">
             <h2 class="grad-one">Terms of Service</h2>
             <div class="tos-box">
-                <span class="tos-item"><strong>Usage:</strong> Textures are for personal use on your VRChat avatars only.</span>
-                <span class="tos-item"><strong>Resale:</strong> Strict prohibition on reselling, sharing, or redistributing texture files.</span>
-                <span class="tos-item"><strong>Credit:</strong> Please provide credit if asked about the texture work.</span>
+                <span class="tos-item"><strong>Assembly & Upload:</strong> To ensure a secure transaction, the avatar is assembled and uploaded via my account after full payment is received. I will then set it to "Public" and send the private link directly to you so you can clone it.</span>
+                <span class="tos-item"><strong>Files:</strong> I provide the custom texture files only. Avatar source files (.unitypackage/FBX) are not included.</span>
+                <span class="tos-item"><strong>Ownership:</strong> Once the commission is fully paid, the texture design is 100% yours for personal use.</span>
+                <span class="tos-item"><strong>Usage:</strong> Strict prohibition on reselling, sharing, or redistributing the texture files.</span>
+                <span class="tos-item"><strong>Refunds:</strong> No refunds once the texturing process has reached 50% completion.</span>
                 <span class="tos-item"><strong>AI Policy:</strong> My work may not be used for AI training or datasets.</span>
-                <span class="tos-item"><strong>Refunds:</strong> No refunds once the texturing process has reached the 50% completion mark.</span>
             </div>
         </section>
 
@@ -250,3 +249,4 @@
 
 </body>
 </html>
+    
